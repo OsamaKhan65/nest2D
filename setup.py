@@ -13,7 +13,7 @@ from distutils.version import LooseVersion
 here = os.path.abspath(os.path.dirname(__file__))
 try:
     import pypandoc
-    long_description = pypandoc.convert('README.md', format='md', to='rst')
+    long_description = pypandoc.convert_file('README.md', format='md', to='rst')
 except(IOError, ImportError):
     with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
         long_description = f.read()
